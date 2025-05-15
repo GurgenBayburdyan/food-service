@@ -17,9 +17,11 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
  * @author Gurgen Bayburdyan
  */
 
+//todo create AbstractUnitTest class annotated with @ExtendWith(MockitoExtension.class) to not put that annotation in every unit test
 @ExtendWith(MockitoExtension.class)
 class CategoryValidatorImplTest {
 
+    //we mock only constructor injected dependencies
     @Mock
     private CategoryValidator validator;
 
