@@ -8,6 +8,7 @@ import java.util.Optional;
 /**
  * @author Gurgen Bayburdyan
  */
+//todo validator package should be in impl package
 public interface DishValidator {
 
     Optional<ErrorType> validateCreate(CreateDishRequestDto requestDto);
