@@ -1,8 +1,9 @@
-package org.example.foodservice.rest.facade.validator.impl;
-
+package org.example.foodservice.rest.facade.impl.validator.impl;
+import org.example.foodservice.AbstractUnitTest;
 import org.example.foodservice.rest.dto.request.CreateDishRequestDto;
 import org.example.foodservice.rest.dto.response.ErrorType;
-import org.example.foodservice.rest.facade.validator.DishValidator;
+import org.example.foodservice.rest.facade.impl.validator.DishValidator;
+import org.example.foodservice.rest.facade.impl.validator.impl.*;
 import org.example.foodservice.service.CategoryService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -19,10 +20,8 @@ import static org.mockito.Mockito.when;
  * @author Gurgen Bayburdyan
  */
 
-@ExtendWith(MockitoExtension.class)
-class DishValidatorImplTest {
+class DishValidatorImplTest extends AbstractUnitTest {
 
-    @Mock
     private DishValidator validator;
 
     @Mock

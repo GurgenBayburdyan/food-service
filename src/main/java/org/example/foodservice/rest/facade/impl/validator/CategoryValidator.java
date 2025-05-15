@@ -1,4 +1,4 @@
-package org.example.foodservice.rest.facade.validator;
+package org.example.foodservice.rest.facade.impl.validator;
 
 import org.example.foodservice.rest.dto.request.CreateCategoryRequestDto;
 import org.example.foodservice.rest.dto.response.ErrorType;

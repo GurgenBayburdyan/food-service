@@ -1,12 +1,13 @@
 package org.example.foodservice.rest.facade.impl;
 
+import org.example.foodservice.AbstractUnitTest;
 import org.example.foodservice.entity.Dish;
-import org.example.foodservice.mapper.DishMapper;
+import org.example.foodservice.rest.facade.impl.mapper.DishMapper;
 import org.example.foodservice.rest.dto.request.CreateDishRequestDto;
 import org.example.foodservice.rest.dto.response.DishDetailsDto;
 import org.example.foodservice.rest.dto.response.ErrorType;
 import org.example.foodservice.rest.facade.DishFacade;
-import org.example.foodservice.rest.facade.validator.DishValidator;
+import org.example.foodservice.rest.facade.impl.validator.DishValidator;
 import org.example.foodservice.service.DishService;
 import org.example.foodservice.service.params.CreateDishParams;
 import org.junit.jupiter.api.BeforeEach;
@@ -27,8 +28,7 @@ import static org.mockito.Mockito.when;
  * @author Gurgen Bayburdyan
  */
 
-@ExtendWith(MockitoExtension.class)
-class DishFacadeImplTest {
+class DishFacadeImplTest extends AbstractUnitTest {
 
     @Mock
     private DishService service;

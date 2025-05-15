@@ -1,12 +1,13 @@
 package org.example.foodservice.rest.facade.impl;
 
+import org.example.foodservice.AbstractUnitTest;
 import org.example.foodservice.entity.Category;
-import org.example.foodservice.mapper.CategoryMapper;
+import org.example.foodservice.rest.facade.impl.mapper.CategoryMapper;
 import org.example.foodservice.rest.dto.request.CreateCategoryRequestDto;
 import org.example.foodservice.rest.dto.response.CategoryDetailsDto;
 import org.example.foodservice.rest.dto.response.ErrorType;
 import org.example.foodservice.rest.facade.CategoryFacade;
-import org.example.foodservice.rest.facade.validator.CategoryValidator;
+import org.example.foodservice.rest.facade.impl.validator.CategoryValidator;
 import org.example.foodservice.service.CategoryService;
 import org.example.foodservice.service.params.CreateCategoryParams;
 import org.junit.jupiter.api.BeforeEach;
@@ -27,8 +28,7 @@ import static org.mockito.Mockito.when;
  * @author Gurgen Bayburdyan
  */
 
-@ExtendWith(MockitoExtension.class)
-class CategoryFacadeImplTest {
+class CategoryFacadeImplTest extends AbstractUnitTest {
 
     @Mock
     private CategoryService service;

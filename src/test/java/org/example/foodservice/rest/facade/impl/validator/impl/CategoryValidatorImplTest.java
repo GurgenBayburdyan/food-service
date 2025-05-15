@@ -1,12 +1,13 @@
-package org.example.foodservice.rest.facade.validator.impl;
+package org.example.foodservice.rest.facade.impl.validator.impl;
 
+import org.example.foodservice.AbstractUnitTest;
 import org.example.foodservice.rest.dto.request.CreateCategoryRequestDto;
 import org.example.foodservice.rest.dto.response.ErrorType;
-import org.example.foodservice.rest.facade.validator.CategoryValidator;
+import org.example.foodservice.rest.facade.impl.validator.CategoryValidator;
+import org.example.foodservice.rest.facade.impl.validator.impl.CategoryValidatorImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Optional;
@@ -17,12 +18,8 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
  * @author Gurgen Bayburdyan
  */
 
-//todo create AbstractUnitTest class annotated with @ExtendWith(MockitoExtension.class) to not put that annotation in every unit test
-@ExtendWith(MockitoExtension.class)
-class CategoryValidatorImplTest {
+class CategoryValidatorImplTest extends AbstractUnitTest {
 
-    //we mock only constructor injected dependencies
-    @Mock
     private CategoryValidator validator;
 
     @BeforeEach

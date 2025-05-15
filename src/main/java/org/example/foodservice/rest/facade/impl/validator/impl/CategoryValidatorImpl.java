@@ -1,10 +1,10 @@
-package org.example.foodservice.rest.facade.validator.impl;
+package org.example.foodservice.rest.facade.impl.validator.impl;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.example.foodservice.rest.dto.request.CreateCategoryRequestDto;
 import org.example.foodservice.rest.dto.response.ErrorType;
-import org.example.foodservice.rest.facade.validator.CategoryValidator;
+import org.example.foodservice.rest.facade.impl.validator.CategoryValidator;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
 
@@ -17,7 +17,7 @@ import java.util.Optional;
 @Component
 @Slf4j
 @AllArgsConstructor
-public class CategoryValidatorImpl implements CategoryValidator {
+class CategoryValidatorImpl implements CategoryValidator {
     @Override
     public Optional<ErrorType> validateCreate(CreateCategoryRequestDto requestDto) {
         log.debug("Executing validate create for request-{}", requestDto);

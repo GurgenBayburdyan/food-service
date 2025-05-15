@@ -1,4 +1,4 @@
-package org.example.foodservice.mapper;
+package org.example.foodservice.rest.facade.impl.mapper;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.foodservice.entity.Category;
@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author Gurgen Bayburdyan
@@ -30,12 +31,9 @@ public class CategoryMapper {
     }
 
     public List<CategoryDetailsDto> toDetailsDtoList(List<Category> categories) {
-        final List<CategoryDetailsDto> dtos = new ArrayList<>();
-
-        //todo read about java Streams, use stream api to map to details dto instead of using for cycle
-        for (final Category category : categories) {
-            dtos.add(toDetailsDto(category));
-        }
+        List<CategoryDetailsDto> dtos = categories.stream()
+                .map(this::toDetailsDto)
+                .toList();
 
         return dtos;
     }

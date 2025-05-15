@@ -20,7 +20,7 @@ import java.util.List;
 @Slf4j
 @Service
 @AllArgsConstructor
-public class CategoryServiceImpl implements CategoryService {
+class CategoryServiceImpl implements CategoryService {
 
     private final CategoryRepository repository;
     @Override

@@ -21,7 +21,7 @@ import java.util.List;
 @Slf4j
 @Service
 @AllArgsConstructor
-public class DishServiceImpl implements DishService {
+class DishServiceImpl implements DishService {
 
     private final DishRepository repository;
     private final CategoryService categoryService;

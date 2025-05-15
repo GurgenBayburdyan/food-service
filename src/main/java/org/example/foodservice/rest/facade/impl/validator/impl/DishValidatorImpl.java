@@ -1,10 +1,10 @@
-package org.example.foodservice.rest.facade.validator.impl;
+package org.example.foodservice.rest.facade.impl.validator.impl;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.example.foodservice.rest.dto.request.CreateDishRequestDto;
 import org.example.foodservice.rest.dto.response.ErrorType;
-import org.example.foodservice.rest.facade.validator.DishValidator;
+import org.example.foodservice.rest.facade.impl.validator.DishValidator;
 import org.example.foodservice.service.CategoryService;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
@@ -18,7 +18,7 @@ import java.util.Optional;
 @Component
 @Slf4j
 @AllArgsConstructor
-public class DishValidatorImpl implements DishValidator {
+class DishValidatorImpl implements DishValidator {
 
     private final CategoryService categoryService;
 

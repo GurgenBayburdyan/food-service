@@ -1,8 +1,9 @@
-package org.example.foodservice.mapper;
+package org.example.foodservice.rest.facade.impl.mapper;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.foodservice.entity.Dish;
 import org.example.foodservice.rest.dto.request.CreateDishRequestDto;
+import org.example.foodservice.rest.dto.response.CategoryDetailsDto;
 import org.example.foodservice.rest.dto.response.DishDetailsDto;
 import org.example.foodservice.service.params.CreateDishParams;
 import org.springframework.stereotype.Component;
@@ -34,11 +35,9 @@ public class DishMapper {
     }
 
     public List<DishDetailsDto> toDetailsDtoList(List<Dish> dishes) {
-        final List<DishDetailsDto> dtos = new ArrayList<>();
-
-        for (final Dish dish : dishes) {
-            dtos.add(toDetailsDto(dish));
-        }
+        List<DishDetailsDto> dtos = dishes.stream()
+                .map(this::toDetailsDto)
+                .toList();
 
         return dtos;
     }
