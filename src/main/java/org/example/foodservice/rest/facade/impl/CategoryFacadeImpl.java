@@ -23,6 +23,7 @@ import java.util.Optional;
 @Service
 @Slf4j
 @AllArgsConstructor
+    //todo all impl classes should be package private
 public class CategoryFacadeImpl implements CategoryFacade {
 
     private final CategoryService service;
@@ -31,6 +32,7 @@ public class CategoryFacadeImpl implements CategoryFacade {
 
     @Override
     public List<CategoryDetailsDto> getAll() {
+        //todo please change the log
         log.info("Executing get all categories rest API");
 
         final List<Category> categories = service.getAll();
