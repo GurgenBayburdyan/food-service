@@ -53,6 +53,7 @@ public class DishFacadeImpl implements DishFacade {
             return detailsDto;
         }
 
+        //todo mapper should be in facade-> impl package
         final CreateDishParams params = mapper.toCreateParams(requestDto);
 
         final Dish dish = service.create(params);
