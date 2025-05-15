@@ -32,6 +32,7 @@ public class CategoryMapper {
     public List<CategoryDetailsDto> toDetailsDtoList(List<Category> categories) {
         final List<CategoryDetailsDto> dtos = new ArrayList<>();
 
+        //todo read about java Streams, use stream api to map to details dto instead of using for cycle
         for (final Category category : categories) {
             dtos.add(toDetailsDto(category));
         }
